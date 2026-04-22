@@ -1,0 +1,11 @@
+name = "image-host-worker"
+main = "src/index.js"
+# 修复：根据 DEBUG.md 1.1 建议，使用稳定的过去日期，避免 2026-04-01 可能导致的部署问题
+compatibility_date = "2025-01-01" 
+
+# 注意：GITHUB_TOKEN 等敏感信息请使用 wrangler secret put 设置，不要写在这里！
+[vars]
+GITHUB_OWNER = "yesterdaier"
+GITHUB_REPO = "Hiro-Library"
+# 可选：设置访问密码，为空则任何人知道 Worker 地址都能调用
+ACCESS_PASSWORD = "NikaidouHiro"

@@ -1,0 +1,1 @@
+(function(){"use strict";self.onmessage=function(a){const{file:t,id:r}=a.data,e=new FileReader;e.onload=()=>{const s=e.result,o=s.split(",")[1];self.postMessage({id:r,success:!0,base64:o,result:s})},e.onerror=()=>{var s;self.postMessage({id:r,success:!1,error:((s=e.error)==null?void 0:s.message)||"Read failed"})},e.readAsDataURL(t)}})();
